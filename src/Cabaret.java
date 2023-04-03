@@ -67,6 +67,13 @@ public class Cabaret {
 
 
     public void cabaretShow(){
-
+        for(Performer performer:performers){
+            System.out.println("Welcome to the cabaret! Next act up... "+performer.getName());
+            if(performer instanceof Dancer){
+                Dancer temp=(Dancer)performer;
+                temp.pirouette(2);
+            }
+            performer.perform();
+        }
     }
 }
